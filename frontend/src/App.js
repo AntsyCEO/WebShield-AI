@@ -276,7 +276,7 @@ export default function App() {
 
     try {
       // Use the new combined full-scan endpoint
-      const response = await fetch(`http://127.0.0.1:5000/scan/full?url=${encodeURIComponent(url)}`);
+      const response = await fetch(`https://webshield-ai-production.up.railway.app/scan/full?url=${encodeURIComponent(url)}`);
       const data     = await response.json();
 
       const issueCount = (data.missing_headers?.length || 0) + (data.ssl?.ssl_issues?.length || 0);
